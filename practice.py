@@ -1,23 +1,25 @@
 import turtle
-import random
+from time import sleep
 
 robot = turtle.Turtle()
-print(robot)
-robot.shape("turtle")
-robot.color('CornflowerBlue')
+kyle = turtle.Turtle()
+screen = turtle.Screen()
+screen.setup(width=500,height=400)
+robot.penup()
+robot.goto(x=-230,y=50)
+kyle.penup()
+kyle.goto(x=-230,y=0)
 
-# def draw_shape(num):
-#     angle = 360/num
-#     for i in range(num):
-#         robot.forward(100)
-#         robot.right(angle)
+sleep(1)
+user_bet = screen.textinput(title="Command prompt",prompt="Enter a command for your robot?: ")
 
-# for i in range(3,11):
-#     draw_shape(i)
-
-moves = [robot.right(90),robot.left(90),robot.forward(100),robot.backward(100)]
+if "forward" in user_bet:
+    user_bet = user_bet.split()
+    robot.fd(int(user_bet[1]))
+    sleep(1)
+    user_bet = screen.textinput(title="Command prompt",prompt="Enter a command for your robot?: ")
 
 
-my_screen = turtle.Screen()
-my_screen.exitonclick()
 
+
+screen.exitonclick()
