@@ -17,9 +17,13 @@ import turtle
 
 pen = turtle.Turtle() 
 screen = turtle.Screen()
+screen.setup(width=600,height=600)
 screen.setworldcoordinates(-200, -200, 200, 200)
 screen.colormode(255)
 pen.pensize(15)
+pen.penup()
+pen.goto(-170,-150)
+pen.pendown()
 
 # method to draw square with dots 
 # space --> distance between dots 
@@ -31,7 +35,6 @@ def draw(space,x):
             # dot 
             pen.dot() 
             pen.color(random.choice(rgb_colors))
-            
             # distance for another dot 
             pen.forward(space) 
         pen.backward(space*x) 

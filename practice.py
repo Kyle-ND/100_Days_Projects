@@ -1,23 +1,22 @@
 import turtle
 from time import sleep
 
-robot = turtle.Turtle()
-kyle = turtle.Turtle()
 screen = turtle.Screen()
-screen.setup(width=500,height=400)
-robot.penup()
-robot.goto(x=-230,y=50)
-kyle.penup()
-kyle.goto(x=-230,y=0)
+screen.setup(width=600,height=600)
+screen.bgcolor("black")
+screen.title("Snake Game")
+di = [0,-20,-40]
+parts = []
 
-sleep(1)
-user_bet = screen.textinput(title="Command prompt",prompt="Enter a command for your robot?: ")
+for i in range(3):
+    snake = turtle.Turtle()
+    snake.shape("square")
+    snake.color("white")
+    snake.penup()
+    snake.goto(di[i],y=0)
+    parts.append(snake)
 
-if "forward" in user_bet:
-    user_bet = user_bet.split()
-    robot.fd(int(user_bet[1]))
-    sleep(1)
-    user_bet = screen.textinput(title="Command prompt",prompt="Enter a command for your robot?: ")
+
 
 
 
