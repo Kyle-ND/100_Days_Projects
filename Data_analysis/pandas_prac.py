@@ -22,10 +22,10 @@ import pandas
 
 # create dataframe
 
-data_dict = {
-    "students":["kyle","zee","sihle"],
-    "scores": [76,56,65]
-}
+# data_dict = {
+#     "students":["kyle","zee","sihle"],
+#     "scores": [76,56,65]
+# }
 
-d = pandas.DataFrame(data_dict)
-d.to_csv("new.csv")
+# d = pandas.DataFrame(data_dict)
+# d.to_csv("new.csv")
